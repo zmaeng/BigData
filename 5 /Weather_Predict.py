@@ -2,11 +2,12 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_squared_error
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense, Input
+from tensorflow.keras.layers import LSTM, Dense, Input, Dropout
 from sklearn.preprocessing import MinMaxScaler
 from bokeh.plotting import figure, show, output_notebook
 from bokeh.models import ColumnDataSource, HoverTool, BoxZoomTool, WheelZoomTool, ResetTool
 from datetime import timedelta
+from tensorflow.keras.optimizers import Adam
 
 # Bokeh 출력 설정
 output_notebook()
@@ -37,16 +38,23 @@ look_back = 60
 X_train, y_train = create_dataset(train_scaled, look_back)
 X_train = X_train.reshape(X_train.shape[0], X_train.shape[1], 1)
 
-# LSTM 모델 구성
+# 모델 아키텍처 수정
 model = Sequential([
     Input(shape=(look_back, 1)),
+    LSTM(100, return_sequences=True),  
+    Dropout(0.2),                      # Dropout 
     LSTM(50),
     Dense(1)
 ])
-model.compile(loss='mean_squared_error', optimizer='adam')
+
+# 학습률 조정
+optimizer = Adam(learning_rate=0.001)
+
+# 컴파일
+model.compile(loss='mean_squared_error', optimizer=optimizer)
 
 # 모델 학습
-model.fit(X_train, y_train, epochs=20, batch_size=32, verbose=1)
+model.fit(X_train, y_train, epochs=50, batch_size=128, verbose=1)
 
 # 검증 데이터 준비
 validate_scaled = scaler.transform(validate_df['평균기온'].values.reshape(-1, 1))
