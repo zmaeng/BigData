@@ -56,7 +56,7 @@ def process_data(year, items):
 
 if __name__ == "__main__":
     # 1954년부터 현재 연도까지의 데이터를 수집합니다.
-    for year in tqdm(range(1954, datetime.now().year + 1), desc="데이터 수집"):
+    for year in tqdm(range(1954,2024), desc="데이터 수집"):
         items = fetch_seoul_weather_data(year)
         if items:
             process_data(year, items)
