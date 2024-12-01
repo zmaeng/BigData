@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from sklearn.metrics import mean_squared_error
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Input
 from sklearn.preprocessing import MinMaxScaler
@@ -66,6 +67,14 @@ validate_source = ColumnDataSource(data={
 p = figure(title="2021-2023년 기온 예측", x_axis_type="datetime", tools=[BoxZoomTool(), WheelZoomTool(), ResetTool()], width=900, height=400)
 p.line('date', 'actual_temp', source=validate_source, color='blue', legend_label="실제 기온")
 p.line('date', 'predicted_temp', source=validate_source, color='red', legend_label="예측 기온")
+
+# 검증 데이터의 실제 기온과 예측 기온 준비
+y_validate_actual = validate_df['평균기온'][look_back:].values
+y_validate_predicted = validate_predictions.flatten()
+
+# MSE 계산
+mse = mean_squared_error(y_validate_actual, y_validate_predicted)
+print(f"검증 데이터 MSE: {mse:.4f}")
 
 # 마우스 오버 효과 추가
 hover = HoverTool(tooltips=[
