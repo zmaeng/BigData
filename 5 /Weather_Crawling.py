@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 from datetime import datetime
 from tqdm import tqdm
-import logging
+import logging 
 import time
 
 # 로깅 설정: 로그 파일을 설정하고 로그 레벨을 INFO로 설정합니다.
