@@ -39,7 +39,8 @@
 - **성능 평가**: Mean Squared Error (MSE)를 사용하여 테스트 데이터셋에 대한 모델의 예측 정확도를 평가합니다.
 
 ### 예측 결과 예시
-![기온 예측](https://your_prediction_image_url_here)
+![기온 예측 2021 ~ 2023](https://github.com/user-attachments/assets/ca832887-511c-4934-9e06-bd52057b31b2)
+
 
 ## 사용 방법
 
