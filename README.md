@@ -46,15 +46,14 @@
 1. **패키지 설치**:
    프로젝트에 필요한 모든 의존성을 설치합니다. 프로젝트의 루트 디렉토리에서 다음 명령어를 실행하세요:
    ```bash
-  # 한글 폰트 설치
-sudo apt-get install -y fonts-nanum
+      # 한글 폰트 설치
+      sudo apt-get install -y fonts-nanum
 
-# 폰트 캐시 재구성
-sudo fc-cache -fv
+      # 폰트 캐시 재구성
+      sudo fc-cache -fv
 
-# Matplotlib 설정
-import matplotlib.pyplot as plt
-
-plt.rcParams['font.family'] = 'NanumGothic'
-plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 오류 방지
+      # Matplotlib 설정
+      import matplotlib.pyplot as plt
+      plt.rcParams['font.family'] = 'NanumGothic'
+      plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 오류 방지
 
