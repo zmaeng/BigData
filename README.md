@@ -22,7 +22,7 @@
   - 모든 연도의 데이터를 하나의 파일(`processed_all_years.csv`)로 통합하여 저장합니다.
 
 ## 데이터 분석 및 시각화
-  ### Correlation.py, Temperature_Analysis.py 코드 실행
+  ###Correlation.py, Temperature_Analysis.py 코드 실행
 - **사용된 도구**: Pandas, Bokeh, Matplotlib, Seaborn
 - **분석 내용**:
   - 연도별 평균기온 변화 추세 분석
@@ -50,7 +50,7 @@
 ## 사용 방법
 
 1. **패키지 설치**:
-   ##한글 꺠짐
+    ###한글 꺠짐
    ```bash
       # 한글 폰트 설치
       sudo apt-get install -y fonts-nanum
