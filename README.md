@@ -4,6 +4,7 @@
 이 프로젝트는 1954년부터 현재까지 서울 지역의 일별 기상 데이터를 수집 및 분석하여 기온 변화 추세를 파악하고, 미래 기온을 예측합니다. 이러한 분석을 통해 기후 변화에 대한 깊은 이해를 목표로 하며, 장기적인 기상 변화에 대비하는 통찰을 제공합니다.
 
 ## 데이터 수집
+  ##Weather_Crawling.py 코드 실행
 - **데이터 출처**: 한국 기상청의 자동 기상 관측 시스템(ASOS) API
 - **수집 데이터**:
   - 일별 평균기온, 최저기온, 최고기온
@@ -11,6 +12,7 @@
 - **수집 방법**: Python `requests` 라이브러리를 사용하여 API에서 JSON 형식의 데이터를 수집합니다.
 
 ## 데이터 처리
+  ##Data_Processing.py 코드 실행
 - **전처리 작업**:
   - 결측치는 해당 변수의 평균값으로 대체합니다.
   - 날짜 포맷은 ISO 표준인 `YYYY-MM-DD` 형식으로 통일합니다.
@@ -20,6 +22,7 @@
   - 모든 연도의 데이터를 하나의 파일(`processed_all_years.csv`)로 통합하여 저장합니다.
 
 ## 데이터 분석 및 시각화
+  ## Correlation.py, Temperature_Analysis.py 코드 실행
 - **사용된 도구**: Pandas, Bokeh, Matplotlib, Seaborn
 - **분석 내용**:
   - 연도별 평균기온 변화 추세 분석
@@ -33,6 +36,7 @@
 ![날씨 요소별 상관관계](https://github.com/user-attachments/assets/6764a80b-1ffc-42e7-b5e5-8641c76432a0)
 
 ## 머신 러닝 모델
+  ##Weather_Predict.py 코드 실행
 - **모델 유형**: LSTM (Long Short-Term Memory)을 사용한 시계열 예측
 - **목적**: 향후 5년간의 일별 평균기온 예측
 - **데이터 처리**: 최근 60일의 데이터를 기반으로 다음 날의 기온을 예측합니다.
@@ -40,6 +44,7 @@
 
 ### 예측 결과 예시
 ![기온 예측 2021 ~ 2023](https://github.com/user-attachments/assets/06616575-b3a8-49b6-b631-71048dacdc79)
+![기온 예측 2024 ~ 2028](https://github.com/user-attachments/assets/2348d616-258c-4385-bdfa-e76cc14af383)
 
 
 ## 사용 방법
