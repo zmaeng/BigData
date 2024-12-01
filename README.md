@@ -29,9 +29,9 @@
 
 ### 시각화 결과 예시
 
-![연도별 평균기온 변화 및 추세](![스크린샷 2024-12-01 175910](https://github.com/user-attachments/assets/8f2a4529-9068-4857-a637-c6d095fa2ef3))
-![5년간 이동 평균기온 변화 및 추세](![스크린샷 2024-12-01 180035](https://github.com/user-attachments/assets/555a7bf3-b4ba-4114-8467-e3227ce61c69))
-![날씨요소별 상관관계](![스크린샷 2024-12-01 144840](https://github.com/user-attachments/assets/6764a80b-1ffc-42e7-b5e5-8641c76432a0))
+![연도별 평균기온 변화 및 추세](https://github.com/user-attachments/assets/8f2a4529-9068-4857-a637-c6d095fa2ef3)
+![5년간 이동 평균기온 변화 및 추세](https://github.com/user-attachments/assets/555a7bf3-b4ba-4114-8467-e3227ce61c69)
+![날씨요소별 상관관계](https://github.com/user-attachments/assets/6764a80b-1ffc-42e7-b5e5-8641c76432a0)
 
 ## 머신 러닝 모델
 - **모델 유형**: LSTM을 사용한 시계열 예측
