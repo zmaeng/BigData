@@ -10,7 +10,7 @@ import time
 logging.basicConfig(filename="seoul_weather_data.log", level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # API 설정: API 키와 기본 URL을 설정합니다.
-SERVICE_KEY = "VjDldzOF1i8S1REbDaCSRc8cYehpbiIW/oad3OLSyC9btr2p1n7OsaHMb9/L/jzcYgQYE3ePEf5dTsZm1E/2Gw=="
+SERVICE_KEY = "VjDldzOF1i8S1REbDaCSRc8cYehpbiIW/oad3OLSyC9btr2p1n7OsaHMb9/L/jzcYgQYE3ePEf5dTsZm1E/2Gw==" #본인의 api 키 입력
 BASE_URL = "http://apis.data.go.kr/1360000/AsosDalyInfoService/getWthrDataList"
 OUTPUT_DIR = "seoul_weather_data"
 
